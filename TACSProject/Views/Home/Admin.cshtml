@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Admin";
+}
+
+@using System.Globalization
+@using TACSProject.Models
+@model List<ClientInfo>
+
+<h1></h1>
+
+@{
+    foreach (var client in Model)
+    {
+        <h1>@client.First @client.Last</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">DUIs</th>
+                    <th scope="col">Tickets</th>
+                    <th scope="col">DoB</th>
+                    <th scope="col">Car Make</th>
+                    <th scope="col">Car Model</th>
+                    <th scope="col">Make/model year</th>
+                    <th scope="col">Full Coverage</th>
+                    <th scope="col">Quote</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="col">@client.ID</th>
+                    <th scope="col">@client.First</th>
+                    <th scope="col">@client.Last</th>
+                    <th scope="col">@client.Email</th>
+                    <th scope="col">@client.Dui</th>
+                    <th scope="col">@client.Tickets</th>
+                    <th scope="col">@client.Dob</th>
+                    <th scope="col">@client.CarMake</th>
+                    <th scope="col">@client.CarModel</th>
+                    <th scope="col">@client.CarYear</th>
+                    <th scope="col">@client.FullCoverage</th>
+                    <th scope="col"> @Convert.ToDouble((@client.Total)).ToString("C", CultureInfo.CurrentCulture)</th>
+                    <th scope="col">@Html.ActionLink("Delete", "Edited", "Home", new { id = client.ID }, null)</th>
+                </tr>
+            </tbody>
+        </table>
+
+    }
+}
+

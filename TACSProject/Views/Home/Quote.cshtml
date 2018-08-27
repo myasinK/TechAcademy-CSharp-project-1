@@ -1,0 +1,89 @@
+﻿@using System.Globalization
+@using TACSProject.Models
+@using TACSProject.ViewModels
+@model TACSProject.ViewModels.CustomerConfirm
+@{
+    ViewBag.Title = "Quote";
+}
+
+<h2>
+    Please verify that the information below is correct.
+</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">Input</th>
+            <th scope="col">Additional fee</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">First Name</th>
+            <td>@Model.First</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Last Name</th>
+            <td>@Model.Last</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Age</th>
+            <td>@Model.Age</td>
+            <td>@Model.AgeFee.ToString("C", CultureInfo.CurrentCulture)</td>
+        </tr>
+        <tr>
+            <th scope="row">Email</th>
+            <td>@Model.Email</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th scope="row">Tickets</th>
+            <td>@Model.Tickets</td>
+            <td>@Model.TicketFee.ToString("C", CultureInfo.CurrentCulture)</td>
+        </tr>
+        <tr>
+            <th scope="row">DUI</th>
+            <td>@Model.Dui</td>
+            <td>@Model.DUIFee.ToString("C", CultureInfo.CurrentCulture)</td>
+        </tr>
+        <tr>
+            <th scope="row">Car Make</th>
+            <td>@Model.Make</td>
+            <td>@Model.MakeFee.ToString("C", CultureInfo.CurrentCulture)</td>
+        </tr>
+        <tr>
+            <th scope="row">Car Model</th>
+            <td>@Model.Model</td>
+            <td>@Model.ModelFee.ToString("C", CultureInfo.CurrentCulture)</td>
+        </tr>
+        <tr>
+            <th scope="row">Base Fee</th>
+            <td>-</td>
+            <td>@Model.Basic.ToString("C", CultureInfo.CurrentCulture)</td>
+        </tr>
+        <tr>
+            <th scope="row">Coverage</th>
+            <td>-</td>
+            <td>@Model.CoverageFee.ToString("C", CultureInfo.CurrentCulture)</td>
+        </tr>
+        <tr>
+            <th scope="row">Total</th>
+            <td>-</td>
+            <td>@Model.Total.ToString("C", CultureInfo.CurrentCulture)</td>
+        </tr>
+
+    </tbody>
+</table>
+
+@{
+    var x = Model;
+}
+
+
+@Html.ActionLink("Confirm and Submit", "Submit", "Home", x, new { @class = "btn btn-primary" })
+
+
+

@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="formDiv">
+    @using (Html.BeginForm("Quote", "Home", FormMethod.Post))
+    {
+
+
+        <form>
+
+            <div class="form-group m-100">
+                <label for="firstName">First Name</label>
+                <input class="form-control" name="first" type="text" placeholder="Enter first name">
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input class="form-control" name="last" type="text" placeholder="Enter last name">
+            </div>
+            
+            <div class="form-group">
+                <label for="inlineFormInput">Day</label>
+                <select name="day" class="custom-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">30</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="inlineFormInput">Month</label>
+                <select name="month" class="custom-select">
+                    <option selected>Open this select menu</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="year">Year of birth</label>
+                <input class="form-control" name="birthYear" type="number" placeholder="Year">
+            </div>
+            
+            <div class="form-group">
+                <label for="tickets">Enter the number of speeding tickets you've gotten</label>
+                <input class="form-control" name="tickets" type="number" placeholder="">
+            </div>
+            
+            <div class="form-group">
+                <label for="make">Car make:</label>
+                <input class="form-control" name="make" type="text" placeholder="Toyota">
+            </div>
+            
+            <div class="form-group">
+                <label for="make">Car model:</label>
+                <input class="form-control" name="model" type="text" placeholder="Corolla">
+            </div>
+            
+            <div class="form-group">
+                <label for="year">Enter the year that car was made</label>
+                <input class="form-control" name="year" type="number" placeholder="Year of Make">
+            </div>
+            
+            <div class="form-group">
+                <input class="form-group-input" type="radio" name="fullCoverage" value="yes" checked>
+                <label class="form-group-label" for="exampleRadios1">
+                    Yes, I want full coverage
+                </label>
+            </div>
+            <div class="form-group">
+                <input class="form-group-input" type="radio" name="fullCoverage" value="no">
+                <label class="form-group-label" for="exampleRadios2">
+                    No, I do not want full coverage
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <input class="form-group-input" type="radio" name="dui" value="yes" checked>
+                <label class="form-group-label" for="exampleRadios1">
+                    Yes, I have a DUI on my driving record
+                </label>
+            </div>
+            <div class="form-group">
+                <input class="form-group-input" type="radio" name="dui" value="no">
+                <label class="form-group-label" for="exampleRadios2">
+                    No, I do not have a DUI on my driving record
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    }
+</div>
